@@ -1,67 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // ЭЛЕМЕНТЫ
     const links = document.querySelectorAll('.tab-link');
     const panes = document.querySelectorAll('.tab-pane');
-    const triggers = document.querySelectorAll('.trigger-sub');
-    const sidebar = document.getElementById('sidebar');
-    const openSidebar = document.querySelector('.open-sidebar');
-    const closeSidebar = document.querySelector('.close-sidebar');
-    const bentoMain = document.getElementById('bento-main-container');
-    const subPanes = document.querySelectorAll('.sub-pane');
+    const subTriggers = document.querySelectorAll('.trigger-sub');
+    const subs = document.querySelectorAll('.sub-pane');
     const backBtns = document.querySelectorAll('.btn-back');
 
-    // ШТОРКА (SIDEBAR)
-    openSidebar.addEventListener('click', () => sidebar.classList.add('open'));
-    closeSidebar.addEventListener('click', () => sidebar.classList.remove('open'));
-
-    // ФУНКЦИЯ ПЕРЕКЛЮЧЕНИЯ ТАБОВ
-    function switchTab(targetId) {
-        sidebar.classList.remove('open'); // Закрываем шторку при клике
-        
-        links.forEach(l => l.classList.remove('active'));
-        panes.forEach(p => p.classList.remove('active'));
-
-        const targetPane = document.getElementById(targetId);
-        const activeLinks = document.querySelectorAll(`.tab-link[data-target="${targetId}"]`);
-
-        if (targetPane) targetPane.classList.add('active');
-        activeLinks.forEach(l => l.classList.add('active'));
-
-        // Сброс внутренних категорий
-        if (bentoMain) bentoMain.style.display = 'block';
-        subPanes.forEach(s => s.classList.remove('active'));
-        
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
+    // Навигация между главными страницами (Главная, Магазин, Услуги)
     links.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            switchTab(link.getAttribute('data-target'));
+            const target = link.getAttribute('data-target');
+            
+            links.forEach(l => l.classList.remove('active'));
+            panes.forEach(p => p.classList.remove('active'));
+            
+            link.classList.add('active');
+            document.getElementById(target).classList.add('active');
+            
+            if(target === 'home') {
+                resetToHome();
+            }
         });
     });
 
-    // ПЕРЕХОД В КАТЕГОРИИ
-    triggers.forEach(trigger => {
+    // Вход в сферу удовольствия (например, Романтика)
+    subTriggers.forEach(trigger => {
         trigger.addEventListener('click', () => {
             const subId = trigger.getAttribute('data-sub');
             
-            // Если кликнули с главной, идем в Разделы
-            if (document.getElementById('home').classList.contains('active')) {
-                switchTab('explore');
-            }
-
-            if (bentoMain) bentoMain.style.display = 'none';
+            // Прячем основные блоки главной
+            document.getElementById('journal-section').style.display = 'none';
+            document.getElementById('bento-main-container').style.display = 'none';
+            document.querySelector('.hero-mini').style.display = 'none';
+            
+            // Показываем контент сферы
             document.getElementById(subId).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
 
+    // Назад
     backBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            if (bentoMain) bentoMain.style.display = 'block';
-            subPanes.forEach(s => s.classList.remove('active'));
-        });
+        btn.addEventListener('click', resetToHome);
     });
+
+    function resetToHome() {
+        subs.forEach(s => s.classList.remove('active'));
+        document.getElementById('journal-section').style.display = 'block';
+        document.getElementById('bento-main-container').style.display = 'block';
+        document.querySelector('.hero-mini').style.display = 'flex';
+    }
 });

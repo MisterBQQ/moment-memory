@@ -3,47 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moment & Memory | Exclusive Life Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@100;300;400;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Moment & Memory | Night Beach Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@100;300;400;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="space-background">
+        <div class="stars"></div>
+        <div class="shooting-stars"></div>
+        <div class="ocean-view"></div>
+    </div>
     <div class="aura aura-1"></div>
     <div class="aura aura-2"></div>
 
-    <div id="sidebar" class="sidebar">
-        <button class="close-sidebar">&times;</button>
-        <div class="sidebar-content">
-            <div class="user-profile">
-                <div class="avatar"></div>
-                <span>Guest User</span>
-            </div>
-            <nav class="side-nav">
-                <a href="#" class="tab-link" data-target="home">🏠 Главная</a>
-                <a href="#" class="tab-link" data-target="vip">💎 VIP Доступ</a>
-                <a href="#" class="tab-link" data-target="booking">📅 Мои бронирования</a>
-                <a href="#" class="tab-link" data-target="shop">🛍 Избранные товары</a>
-                <hr>
-                <a href="#">⚙️ Настройки</a>
-                <a href="#">📞 Поддержка</a>
-            </nav>
-        </div>
-    </div>
-
     <header>
-        <div class="header-left">
-            <button class="open-sidebar"><span></span><span></span><span></span></button>
-            <div class="logo">Moment<span>Memory</span></div>
-        </div>
+        <div class="logo">Moment<span>Memory</span></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#" class="tab-link active" data-target="home">Главная</a></li>
-                <li><a href="#" class="tab-link" data-target="explore">Разделы</a></li>
-                <li><a href="#" class="tab-link" data-target="booking">Бронирование</a></li>
-                <li><a href="#" class="tab-link" data-target="services">Услуги</a></li>
                 <li><a href="#" class="tab-link" data-target="shop">Магазин</a></li>
-                <li><a href="#" class="tab-link" data-target="collab">Партнерство</a></li>
+                <li><a href="#" class="tab-link" data-target="services">Услуги</a></li>
                 <li><a href="#" class="tab-link vip-btn" data-target="vip">VIP ACCESS</a></li>
             </ul>
         </nav>
@@ -51,186 +31,131 @@
 
     <main>
         <section id="home" class="tab-pane active">
-            <div class="hero centered">
-                <span class="hero-subtitle">The Art of Living</span>
+            
+            <div class="hero-mini centered">
+                <span class="hero-subtitle">Premium Lifestyle Experience</span>
                 <h1 class="glow-text">Moment & Memory</h1>
-                <p class="hero-descr">Ваш портал в мир исключительных событий. Мы собрали все грани премиального отдыха в одном месте.</p>
             </div>
 
-            <div class="container centered">
-                <div class="main-hub-grid">
-                    
-                    <div class="hub-card tall trigger-sub" data-sub="sub-romance" style="--bg: url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=800')">
-                        <div class="hub-overlay">
-                            <span class="hub-tag">Premium</span>
-                            <h3>Романтика</h3>
-                            <p>Ужины, свидания и незабываемые ночи для двоих</p>
-                            <button class="hub-btn">Перейти →</button>
+            <div class="container section-block" id="journal-section">
+                <div class="section-header">
+                    <h2 class="title-serif">Журнал событий</h2>
+                    <p>Эксклюзивные предложения и новости этой недели</p>
+                </div>
+                <div class="journal-row">
+                    <div class="journal-item" style="--bg: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600')">
+                        <div class="j-overlay">
+                            <span class="j-tag">Событие</span>
+                            <h3>Jazz Night под звездами</h3>
+                            <p>Живой звук и дегустация редких вин в саду Orion. Пятница, 20:00.</p>
                         </div>
                     </div>
-
-                    <div class="hub-card trigger-sub" data-sub="sub-gastronomy" style="--bg: url('https://images.unsplash.com/photo-1550966841-3ee5ad60d0d9?q=80&w=800')">
-                        <div class="hub-overlay">
-                            <h3>Гастрономия</h3>
-                            <p>Лучшие шеф-повара и закрытые бары города</p>
+                    <div class="journal-item" style="--bg: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600')">
+                        <div class="j-overlay">
+                            <span class="j-tag">Предложение</span>
+                            <h3>Weekend на Иссык-Куле</h3>
+                            <p>Закрытый пляж и аренда яхты со скидкой 15% для резидентов.</p>
                         </div>
                     </div>
-
-                    <div class="hub-card trigger-sub" data-sub="sub-relax" style="--bg: url('https://images.unsplash.com/photo-1544124499-58912cbddaad?q=80&w=800')">
-                        <div class="hub-overlay">
-                            <h3>SPA & Relax</h3>
-                            <p>Термальные источники и элитные центры восстановления</p>
-                        </div>
-                    </div>
-
-                    <div class="hub-card wide tab-link" data-target="shop" style="--bg: url('https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1200')">
-                        <div class="hub-overlay">
-                            <span class="hub-tag">New</span>
-                            <h3>Moment Store</h3>
-                            <p>Заберите частичку нашей атмосферы с собой. Эксклюзивные боксы и ароматы.</p>
-                            <button class="hub-btn">В магазин</button>
-                        </div>
-                    </div>
-
-                    <div class="hub-card tab-link" data-target="services" style="--bg: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800')">
-                        <div class="hub-overlay">
-                            <h3>Консьерж 24/7</h3>
-                            <p>Любое ваше желание под нашим контролем</p>
-                        </div>
-                    </div>
-
-                    <div class="hub-card tab-link" data-target="vip" style="--bg: url('https://images.unsplash.com/photo-1563911302283-d2bc129e7570?q=80&w=800')">
-                        <div class="hub-overlay">
-                            <h3 style="color: #d4af37;">VIP Клуб</h3>
-                            <p>Доступ к закрытому сообществу</p>
+                    <div class="journal-item" style="--bg: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=600')">
+                        <div class="j-overlay">
+                            <span class="j-tag">Совет</span>
+                            <h3>Гастро-тур недели</h3>
+                            <p>Три новых заведения Бишкека, которые изменят ваше представление о вкусе.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="explore" class="tab-pane">
-            <div class="container centered" id="bento-main-container">
-                <h2 class="glow-text">Каталог впечатлений</h2>
-                <div class="main-hub-grid small-grid">
-                    <div class="hub-card trigger-sub" data-sub="sub-romance" style="--bg: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=800')"><div class="hub-overlay"><h3>Романтика</h3></div></div>
-                    <div class="hub-card trigger-sub" data-sub="sub-adventure" style="--bg: url('https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80&w=800')"><div class="hub-overlay"><h3>Приключения</h3></div></div>
+            <div class="container section-block" id="bento-main-container">
+                <div class="section-header">
+                    <h2 class="title-serif">Сферы удовольствия</h2>
+                    <p>Ваш персональный маршрут к идеальным воспоминаниям</p>
+                </div>
+                <div class="compact-grid">
+                    <div class="grid-item trigger-sub" data-sub="sub-romance" style="--bg: url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=500')">
+                        <div class="item-content"><h3>Романтика</h3><span>9 локаций</span></div>
+                    </div>
+                    <div class="grid-item trigger-sub" data-sub="sub-gastronomy" style="--bg: url('https://images.unsplash.com/photo-1550966841-3ee5ad60d0d9?q=80&w=500')">
+                        <div class="item-content"><h3>Гастрономия</h3><span>15 заведений</span></div>
+                    </div>
+                    <div class="grid-item trigger-sub" data-sub="sub-relax" style="--bg: url('https://images.unsplash.com/photo-1544124499-58912cbddaad?q=80&w=500')">
+                        <div class="item-content"><h3>Релакс и SPA</h3><span>6 программ</span></div>
+                    </div>
+                    <div class="grid-item trigger-sub" data-sub="sub-active" style="--bg: url('https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80&w=500')">
+                        <div class="item-content"><h3>Активности</h3><span>12 идей</span></div>
+                    </div>
                 </div>
             </div>
 
-            <div id="sub-romance" class="sub-pane container centered">
-                <button class="btn-back">← Назад</button>
-                <div class="details-grid">
-                    <div class="detail-card">
-                        <img src="https://images.unsplash.com/photo-1529636760656-e09213707fcf?q=80&w=600">
-                        <div class="card-body">
-                            <h3>Пикник на крыше</h3>
-                            <p>Индивидуально оформленная локация с видом на огни ночного города. Включено: ужин, свечи, телескоп.</p>
-                            <span class="price-tag">12 000 KGS</span>
+            <div id="sub-romance" class="sub-pane container">
+                <button class="btn-back">← Назад к сферам</button>
+                <h2 class="title-serif">Романтика</h2>
+                <div class="details-list">
+                    <div class="d-card">
+                        <div class="d-img" style="background-image: url('https://images.unsplash.com/photo-1529636760656-e09213707fcf?q=80&w=500')"></div>
+                        <div class="d-text">
+                            <h3>Свидание на высоте 3000м</h3>
+                            <p>Вертолетная прогулка и пикник на леднике. Самый экстремальный способ сказать "люблю".</p>
+                            <span class="price">от 85 000 KGS</span>
                         </div>
                     </div>
-                    <div class="detail-card">
-                        <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=600">
-                        <div class="card-body">
-                            <h3>Конная прогулка в горах</h3>
-                            <p>Маршрут для двоих через хвойный лес к водопаду. Завершается ужином у костра.</p>
-                            <span class="price-tag">15 500 KGS</span>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600">
-                        <div class="card-body">
-                            <h3>Ночь в Глэмпинге</h3>
-                            <p>Премиальный купол с панорамным окном на звезды. Уединение и комфорт 5-звездочного отеля.</p>
-                            <span class="price-tag">18 000 KGS</span>
+                    <div class="d-card">
+                        <div class="d-img" style="background-image: url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=500')"></div>
+                        <div class="d-text">
+                            <h3>Ночь под звездами в глэмпинге</h3>
+                            <p>Прозрачный купол, уютный камин и абсолютная тишина горного ущелья.</p>
+                            <span class="price">18 000 KGS</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div id="sub-gastronomy" class="sub-pane container">
+                <button class="btn-back">← Назад к сферам</button>
+                <h2 class="title-serif">Гастрономия</h2>
+                <div class="details-list">
+                    <div class="d-card">
+                        <div class="d-img" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=500')"></div>
+                        <div class="d-text">
+                            <h3>Chef's Table: Закрытый ужин</h3>
+                            <p>Уникальный сет от шеф-повара прямо на кухне ресторана. Только 6 мест.</p>
+                            <span class="price">12 000 KGS / чел</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <section id="shop" class="tab-pane">
-            <div class="container centered">
-                <h2 class="glow-text">Moment Store</h2>
-                <div class="details-grid">
-                    <div class="detail-card shop-item">
-                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=500">
-                        <div class="card-body">
-                            <span class="item-cat">Best Seller</span>
-                            <h3>Aura Candle "Memory"</h3>
-                            <p>Ароматическая свеча с нотами сандала и мускуса, созданная специально для наших вечеров.</p>
-                            <span class="price-tag">2 800 KGS</span>
-                            <button class="btn-buy">Купить</button>
-                        </div>
+            <div class="container section-block centered">
+                <h2 class="title-serif">Moment Store</h2>
+                <div class="shop-grid">
+                    <div class="shop-card">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=400">
+                        <h3>Aura Candle: Midnight Beach</h3>
+                        <p>Свеча с ароматом морской соли и ночного бриза.</p>
+                        <span class="price">3 200 KGS</span>
+                        <button class="btn-buy">В корзину</button>
                     </div>
-                    <div class="detail-card shop-item">
-                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=500">
-                        <div class="card-body">
-                            <span class="item-cat">Exclusive</span>
-                            <h3>Memory Box: Romance</h3>
-                            <p>Полный подарочный набор: вино, бокалы, свечи, карта звездного неба и сертификат на свидание.</p>
-                            <span class="price-tag">8 500 KGS</span>
-                            <button class="btn-buy">Купить</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="booking" class="tab-pane">
-            <div class="container centered">
-                <h2 class="glow-text">Забронировать момент</h2>
-                <div class="glass-form-box">
-                    <form>
-                        <div class="f-group"><label>Выберите локацию</label>
-                            <select><option>Sky Lounge Lumiere</option><option>Restaurant Frunze</option><option>Boutique Hotel "Aura"</option></select>
-                        </div>
-                        <div class="f-flex">
-                            <input type="date">
-                            <input type="time">
-                        </div>
-                        <input type="number" placeholder="Количество гостей">
-                        <button type="button" class="btn-submit">Подтвердить запрос</button>
-                    </form>
                 </div>
             </div>
         </section>
 
         <section id="services" class="tab-pane">
-            <div class="container centered">
-                <h2 class="glow-text">Услуги консьержа</h2>
-                <div class="service-stack">
+            <div class="container section-block centered">
+                <h2 class="title-serif">Наши Услуги</h2>
+                <div class="services-list">
                     <div class="service-row">
-                        <span class="s-num">01</span>
-                        <div class="s-info"><h3>Трансфер бизнес-класса</h3><p>Встреча в аэропорту или сопровождение по городу на Mercedes S-class.</p></div>
-                        <span class="s-price">от 8 000 KGS</span>
+                        <span>01</span>
+                        <div class="s-info"><h3>Персональный Lifestyle Менеджер</h3><p>Решение любых задач — от покупки подарка до планирования отпуска.</p></div>
+                        <span class="s-price">от 15 000 KGS</span>
                     </div>
-                    <div class="service-row">
-                        <span class="s-num">02</span>
-                        <div class="s-info"><h3>Личный флорист</h3><p>Доставка редких цветов и оформление локаций любой сложности.</p></div>
-                        <span class="s-price">от 5 000 KGS</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="vip" class="tab-pane">
-            <div class="container centered">
-                <div class="vip-mega-card">
-                    <h2 class="glow-text">Black Membership</h2>
-                    <p>Это не просто доступ, это другой уровень жизни. Приоритетное бронирование заведений даже при полной посадке, доступ к закрытым чатам и персональный менеджер.</p>
-                    <button class="btn-gold-fill">Подать заявку</button>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container centered">
-            <div class="logo">Moment<span>Memory</span></div>
-            <p>© 2026. Эксклюзивный гид по Кыргызстану.</p>
-        </div>
-    </footer>
 
     <script src="main.js"></script>
 </body>
